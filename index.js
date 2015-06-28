@@ -32,7 +32,7 @@ var I18n = function() {
 	 	req.locale = {
 	 		default : this.default,
 	 		directory : this.directory,
-			lang : (locale !== this.default && locale !== cookie) ? this.supported(res, locale) : (!!cookie) ? locale : this.default
+			lang : (locale !== this.default && locale !== cookie) ? this.supported(res, locale) : (!!cookie) ? locale : null
 	 	};
 
 		next();	

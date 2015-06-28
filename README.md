@@ -35,11 +35,11 @@ Assuming scaffolding above (using mongoose as an example):
 module.exports = function(server, mongoose) {
 	var i18n,
 		cwd = process.cwd(),
-		user = require(cwd + '/api/controller/user')(mongoose);
+		controller = require(cwd + '/api/controller/user')(mongoose);
 
 	i18n = function(req, res, next) {
-		if (req.locale.lang !== req.locale.default) {
-			user.i18 = {
+		if (!!req.locale.lang) {
+			controller.user.i18 = {
 				error : require(cwd + req.locale.directory + req.locale.lang + '/user/error')
 			};
 		}
@@ -48,11 +48,11 @@ module.exports = function(server, mongoose) {
 	}
 
 	server.get('/me', i18n, function(req, res, next) {
-		user.find(req, res, next);
+		controller.find(req, res, next);
 	});
 
 	server.post('/register', i18n, function(req, res, next) {
-		user.register(req, res, next);
+		controller.register(req, res, next);
 	});
 }
 ```
