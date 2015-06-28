@@ -178,6 +178,19 @@ module.exports = function(mongoose) {
 
 ```
 
+
+```js
+// i18n/en-US/user/error.js
+
+module.exports = {
+	email : 'Not a valid email address.',
+	none : 'User not found.',
+	password : 'Password is violating minimum requirement of documented constraints.',
+	phone : 'Not a valid phone number.',
+	username : 'US - Username required.'
+}
+```
+
 #### Example File Structure
 
 ```
