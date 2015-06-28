@@ -8,10 +8,12 @@ restify-i18n
 ```js
 var i18n = require('restify-i18n'),
 	restify = require('restify'),
+	cookies = require('restify-cookies'),
 	mongoose = require(cwd + '/api/database/mongo')(config),
 	server = restify.createServer();
 
 i18n.set('directory', '/api/i18n/');
+server.use(cookies.parse);
 server.use(i18n.locale);
 
 require('./routes/example')(server, mongoose);
@@ -23,6 +25,10 @@ server.listen(8000);
 
 [accept-language](https://github.com/tinganho/node-accept-language)
 
+[restify-cookies](https://github.com/nathschmidt/restify-cookies)
+
+
+restify-cookies is required as a separate install at the API level and before i18n is injected as middleware. `res.setCookie` needs to be exposed before i18n.locale runs.
 
 #### Example scenario
 
