@@ -1,0 +1,25 @@
+{
+  "name": "restify-i18n",
+  "version": "0.0.1",
+  "description": "parses accept-language cookie and header as restify middleware in order to pass correct i18n before route completion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/listenrightmeow/restify-i18n"
+  },
+  "dependencies" : {
+    "accept-language": "^2.0.16",
+    "restify-cookies": "^0.1.1"
+  },
+  "keywords": [
+    "restify",
+    "i18n",
+    "accept-language",
+    "i18"
+  ],
+  "author": "listenrightmeow",
+  "license": "MIT"
+}
