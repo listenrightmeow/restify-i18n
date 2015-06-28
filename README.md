@@ -19,6 +19,11 @@ require('./routes/example')(server, mongoose);
 server.listen(8000);
 ```
 
+### Dependencies
+
+[accept-language](https://github.com/tinganho/node-accept-language)
+
+
 #### Example scenario
 
 Assuming scaffolding above (using mongoose as an example):
