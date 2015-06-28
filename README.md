@@ -187,7 +187,7 @@ module.exports = {
 	none : 'User not found.',
 	password : 'Password is violating minimum requirement of documented constraints.',
 	phone : 'Not a valid phone number.',
-	username : 'US - Username required.'
+	username : 'Username required.'
 }
 ```
 
