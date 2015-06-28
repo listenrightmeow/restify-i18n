@@ -1,6 +1,6 @@
 {
   "name": "restify-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parses accept-language cookie and header as restify middleware in order to pass correct i18n before route completion",
   "main": "index.js",
   "scripts": {
