@@ -12,7 +12,7 @@ var i18n = require('restify-i18n'),
 	server = restify.createServer();
 
 i18n.set('directory', '/api/i18n/');
-server.use(i18n.local);
+server.use(i18n.locale);
 
 require('./routes/example')(server, mongoose);
 
